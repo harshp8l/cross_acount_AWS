@@ -1,0 +1,18 @@
+{
+   "bot_account_id" : "", 
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Action":[
+            "logs:Describe*",
+            "logs:Get*",
+            "logs:TestMetricFilter",
+            "logs:FilterLogEvents"
+         ],
+         "Effect":"Allow",
+         "Resource": [
+              `arn:aws:us-west-2:$(bot_account_id):log-group:/aws/lambda/LabelBot-dev-label`
+         ]
+      }
+   ]
+}
